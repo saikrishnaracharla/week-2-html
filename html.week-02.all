@@ -1,0 +1,1429 @@
+21  
+week2-IP-CipherSchools/class10-links-CipherSchools.html
+@@ -0,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class10.css">
+    <title>links & Navigation</title>
+</head>
+<body>
+    <!-- Relative URL path -->
+    <a>Click here</a>
+    <a href="#">Click here</a>
+    <a href="#">Click here</a>
+    <a href="#">Click here</a>
+    <a href="#">Click here</a>
+    <a href="#">Click here</a>
+    <!-- Absolute URL path -->
+     <!-- <a href="https://www.google.co.in/">Google</a> -->
+</body>
+</html>
+ 18  
+week2-IP-CipherSchools/class10.css
+@@ -0,0 +1,18 @@
+a{
+    color: red;
+}
+a:link{
+    color: brown;
+}
+a:hover{
+    background-color: cornsilk;
+}
+a:active{
+    background-color: black;
+}
+a:focus{
+    border: 1px solid green;
+}
+a:visited{
+    color: purple;
+}
+ 22  
+week2-IP-CipherSchools/class11-pseduo-CipherSchools.html
+@@ -0,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class11.css">
+    <title>Pseudo Elements</title>
+</head>
+<body>
+    <p>
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Velit dolores et eligendi eos! Tempora quisquam totam saepe ratione vero numquam obcaecati fugit, dignissimos, odio repudiandae ex veritatis praesentium similique. Eaque.
+        Porro optio vero unde numquam architecto esse eaque, reiciendis in corrupti ut officia aliquid, eos reprehenderit, doloribus tempora cum illo ad! Deserunt, at! Soluta iste cumque incidunt? Ipsum, veniam illo?
+    </p>
+    <ul>
+        <li>One</li>
+        <li>Two</li>
+        <li>Three</li>
+    </ul>
+    <input type="text" placeholder="Enter the text">
+</body>
+</html>
+ 24  
+week2-IP-CipherSchools/class11.css
+@@ -0,0 +1,24 @@
+p::after{
+    content: "This is the para" ;
+}
+p::before{
+    content: "This is the para";
+}
+p::first-letter{
+    background-color: red;
+}
+p::first-line{
+    color: royalblue;
+}
+p::selection{
+    background-color: salmon;
+    color: #fff;
+}
+li::marker{
+    color: seagreen;
+    font-size:30px ;
+}
+input[type="text"]::placeholder{
+    color: #fff;
+    background-color: slategray;
+}
+ 21  
+week2-IP-CipherSchools/class12-Generic-CipherSchools.html
+@@ -0,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class12.css">
+    <title>Generic Elements in HTML</title>
+</head>
+<body>
+    <div class="box">
+        <div>This is the first paragraph</div>
+        <div>This is the first paragraph</div>
+        <span>This is the second paragraph</span>
+        <span>This is the third paragraph</span>
+    </div>
+    <div>
+
+    </div>
+</body>
+</html>
+ 53  
+week2-IP-CipherSchools/class12.css
+@@ -0,0 +1,53 @@
+.box div{
+    display: inline;
+    background-color: steelblue;
+}
+.box span{
+    display: block;
+}
+.box{
+    background-color: tan;
+    width: 300px;
+    height: 300px;
+
+
+    /* for the space inside the box */
+    /* padding-top: 10px;
+    padding-left: 20px;
+    padding-bottom: 30px;
+    padding-right: 20px; */
+    padding: 10px; /*Same all the side*/
+    /* top ,bottom & right ,left */
+    padding: 20px 10px;
+    /* top & right ,left & bottom */
+    padding: 20px 50px 20px;
+    /* Top , right , bottom ,left */
+    padding: 20px 50px 20px 50px;
+
+
+    /* Place a border outside a block */
+    /* border-width: 2px;
+    border-style: solid;
+    border-color: #333; */
+    /* Shorthand */
+    border: 2px solid #333;
+
+    /* Spaces around the block*/
+    /* margin-top: 20px;
+    margin-left: 30px;
+    margin-bottom: 30px;
+    margin-right: 40px; */
+
+
+    /*margin Shorthand*/
+    /*Same all the side*/
+    /* margin: 10px; */
+    /* top ,bottom & right ,left */
+    /* margin: 20px 10px; */
+    /* top & right ,left & bottom */
+    /* margin: 20px 50px 20px; */
+    /* Top , right , bottom ,left */
+    /* margin: 20px 50px 20px 50px; */
+    /* Centered block */
+    margin: auto;
+}
+ 49  
+week2-IP-CipherSchools/class13,14-accpanel,typography-CipherSchools.html
+@@ -0,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class13,14.css">
+    <title>Accordion panels</title>
+</head>
+
+<body>
+    <div class="accordian">
+        <div class="panel">
+            <input type="radio" name="one-panel" id="one-panel">
+            <label for="one-panel">Accordian one</label>
+
+            <div class="box">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reprehenderit hic est at voluptate
+                    similique possimus cupiditate ipsum minima? Impedit nesciunt ducimus dolore repellendus modi.
+                    Dignissimos eius ipsam sint doloremque.
+                    Aut ab repellendus corrupti itaque, nemo expedita voluptas cum illum? Nobis voluptates repudiandae
+                    exercitationem perferendis non? Alias, dolore! Cum, dolorum optio. Magnam quaerat, est pariatur eius
+                    distinctio vero tenetur id.
+                </p>
+            </div>
+        </div>
+    </div>
+    <div class="accordian">
+        <div class="panel">
+            <input type="radio" name="one-panel" id="one-panel">
+            <label for="one-panel">Accordian two</label>
+
+            <div class="box">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Non reprehenderit hic est at voluptate
+                    similique possimus cupiditate ipsum minima? Impedit nesciunt ducimus dolore repellendus modi.
+                    Dignissimos eius ipsam sint doloremque.
+                    Aut ab repellendus corrupti itaque, nemo expedita voluptas cum illum? Nobis voluptates repudiandae
+                    exercitationem perferendis non? Alias, dolore! Cum, dolorum optio. Magnam quaerat, est pariatur eius
+                    distinctio vero tenetur id.
+                </p>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+ 60  
+week2-IP-CipherSchools/class13,14.css
+@@ -0,0 +1,60 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* font-style: italic;
+    font-variant: normal;
+    font-weight: bold;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: "Inter",sans-serif; */
+    font: italic normal bold 16px/1.5 "Inter",sans-serif;
+    letter-spacing: 1px;
+    word-spacing: 10px;
+    text-decoration: underline;
+    text-align: left;
+}
+.accordian{
+    margin: 20px;
+}
+.accordian .panel{
+    padding: 20px;
+    border: 1px solid #333;
+}
+.accordian .panel label{
+    padding: 10px;
+    cursor: pointer;
+    display: block;
+    position: relative;
+    font-weight: bold;
+}
+.accordian .panel label::before{
+    content: "";
+    position: absolute;
+    top: 12px;
+    left: 2px;
+    width: 0;
+    height: 0;
+    border-top: 8px solid transparent;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid #333;
+}
+.accordian .panel .box{
+    display: none;
+}
+.accordian .panel input:checked ~ label{
+    color: purple;
+}
+.accordian .panel input:checked ~ label::before{
+    transform: rotate(90deg);
+}
+
+.accordian .panel input:checked ~ .box{
+    display: block;
+    padding: 0 20px 10px 20px ;
+}
+.accordian .panel input{
+    display: none;
+}
+ 28  
+week2-IP-CipherSchools/class15-float-CipherSchools.html
+@@ -0,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class15.css">
+    <title>Floats</title>
+</head>
+
+<body>
+    <div class="container">
+        <img src="fruit.jpg" alt="" width="100px">
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Cumque neque aperiam molestiae, ipsum maiores
+            explicabo libero deserunt necessitatibus minima fuga in blanditiis eum incidunt placeat? Dolor, facere. Qui,
+            tempore facilis!
+            Eligendi, modi neque eos eius est error ad tenetur fugiat tempore pariatur voluptate accusamus accusantium
+            recusandae rem veritatis eum sunt? Placeat magnam nam quo autem officia molestiae consectetur numquam nemo!
+        </p>
+        <p class="para">
+            Paragraph add one idea at a time to your       broader argument
+        </p>
+    </div>
+</body>
+
+</html>
+ 18  
+week2-IP-CipherSchools/class15.css
+@@ -0,0 +1,18 @@
+.container{
+    width: 200px;
+    height: 300px;
+    margin: auto;
+    overflow: auto;
+    /* overflow: hidden; */
+    border: 1px solid #333;
+    padding: 5px;
+}
+.container img{
+    float: left;
+}
+p{
+    float: left;
+}
+.container .para{
+    clear: both;
+}
+ 19  
+week2-IP-CipherSchools/class16-postioning-CipherSchools.html
+@@ -0,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class16.css">
+    <title>Postioning</title>
+</head>
+<body>
+    <div class="Relative"><p>Relative</p></div>
+    <div class="Absolute"><p>Absolute</p></div>
+    <div class="Fixed"><p>Fixed</p></div>
+    <div class="Sticky"><p>Sticky</p></div>
+    <div class="Static"><p>Static</p></div>
+
+
+</body>
+</html>
+ 44  
+week2-IP-CipherSchools/class16.css
+@@ -0,0 +1,44 @@
+body{
+    border: 1px solid #333;
+    position: relative;
+    height: 1000px;
+}
+
+div{
+    background: lightblue;
+    padding: 10px;
+    margin: 10px;
+    width: 60px;
+}
+
+.Static{
+    position: static;
+}
+
+.Relative {
+    position: relative;
+    top: 50px;
+    right: -130px;
+    background: purple;
+    color: #fff;
+    z-index: 100;
+}
+
+.Absolute {
+    position:absolute;
+    top: 10%;
+    right: 5%;
+    z-index: 200;
+}
+
+.Fixed{
+    position: fixed;
+    top: -20px;
+    right: 20px;
+}
+
+.Sticky{
+    position: sticky;
+    top: 30%;
+
+}
+ 56  
+week2-IP-CipherSchools/class17-CSSflexbox-CipherSchools.html
+@@ -0,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class17.css">
+    <title>CSS Flexbox</title>
+</head>
+
+<body>
+    <div class="cards-container">
+        <div class="card">
+            <div class="inner-card">
+                <p>ONE</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>TWO</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>THREE</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>FOUR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>FIVE</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>SIX</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>SEVEN</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>EIGHT</p>
+            </div>
+        </div>
+</body>
+
+</html>
+ 29  
+week2-IP-CipherSchools/class17.css
+@@ -0,0 +1,29 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards-container{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    background: rgb(55, 13,83);
+    /* flex-wrap: wrap;
+    justify-content: center;
+    align-items: center; */
+}
+
+.card {
+    width: 60px;
+    height: 50px;
+    background: #f52e5d;
+    color: efff;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+}
+
+.inner-card p {
+    font-size: 14px;
+}
+ 56  
+week2-IP-CipherSchools/class18-CSSGrids-CipherSchools.html
+@@ -0,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class18.css">
+    <title>CSS Flexbox</title>
+</head>
+
+<body>
+    <div class="cards-container">
+        <div class="card">
+            <div class="inner-card">
+                <p>ONE</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>TWO</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>THREE</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>FOUR</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>FIVE</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>SIX</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>SEVEN</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="inner-card">
+                <p>EIGHT</p>
+            </div>
+        </div>
+</body>
+
+</html>
+ 35  
+week2-IP-CipherSchools/class18.css
+@@ -0,0 +1,35 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.cards-container{
+    width: 100%;
+    height: 50vh;
+    display: grid;
+    flex-direction: row;
+    background: rgb(55, 13,83);
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 100px 100px;
+    grid-auto-columns: 50px;
+    gap: 10px 20px;
+}
+
+.card {
+    width: 60px;
+    height: 50px;
+    background: #f52e5d;
+    color: #efff;
+    text-align: center;
+    margin: 10px;
+    padding: 10px;
+    /* flex-grow: 1;
+    flex-shrink: 1;
+    flex-basis: 100px; */
+    flex: 1 1 auto;
+}
+
+.inner-card p {
+    font-size: 14px;
+}
+ 21  
+week2-IP-CipherSchools/class19-responsive-CipherSchools.html
+@@ -0,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class19.css">
+    <title>Document</title>
+</head>
+<body>
+    <p>
+        A paragraph is a series of related sentences developing a central idea, called the topic. Try to think about paragraphs in terms of thematic unity: a paragraph is a sentence or a group of sentences that supports one central, unified idea. Paragraphs add one ided at a time to your broader argument.
+    </p>
+    <picture>
+    <source media="(max-width: 600px)" srcset="https://www.w3schools.com/html/pic_trulli.jpg">
+    <source media="(max-width: 900px)" srcset="https://www.w3schools.com/html/img_car.jpg">
+    <img src="https://www.w3schools.com/html/img_food.jpg" alt="" width="50%">
+    </picture>
+
+</body>
+</html>
+ 16  
+week2-IP-CipherSchools/class19.css
+@@ -0,0 +1,16 @@
+div
+{
+width: 50%;
+}
+
+@media screen and (max-width: 768px) {
+    p{
+        font-size: 30px;
+    }
+}
+/* 320px - Mobile Portraits */
+/* 480px - Mobile Landscape */
+/* 600px - Small Tablet */ 
+/* 768px - Table portrait */ 
+/* 940px - Tablet Landscape */ 
+/* 1240px or greater - Desktop / Laptops */
+ 36  
+week2-IP-CipherSchools/class2-text-CipherSchools.html
+@@ -0,0 +1,36 @@
+<!Doctype html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport",content="width-device-width,initial-scale-1.0">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>paragraphs,headlines,small text,superscripts and subscripts</title>
+    <style>
+       /*@import url("/css/style.css");*/
+    p{
+        background-color: blue;
+    }
+</style>
+</head>
+<body>
+    <p><em>Hello Everyone</em></p>
+    <h1 style="color: red;">welcome to the bootcamp</h1>
+    <h2 style="color: red;">welcome to the bootcamp</h2>
+    <h3 style="color: red;">welcome to the bootcamp</h3>
+    <h4 style="color: red;">welcome to the bootcamp</h4>
+    <h5 >welcome to the bootcamp</h5>
+    <h6 >welcome to the bootcamp</h6>
+
+    <!--Subscripts-->
+    <p>
+        <strong>H<sub>2</sub>O</strong>
+    </p>
+
+    <!--Superscripts-->
+    <p>
+        5<sup>3</sup>
+    </p>
+    <small>All right reserved &copy; 2021</small>
+</body>
+</html>
+ 18  
+week2-IP-CipherSchools/class20-keyframes-CipherSchools.html
+@@ -0,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class20.css">
+    <title>Responsiveness</title>
+</head>
+<body>
+    <div>
+        <h1>
+            A paragraph is a series of related sentences
+        </h1>
+        <img width="200px" src="image_car.jpg" alt="">
+    </div>
+</body>
+</html>
+ 22  
+week2-IP-CipherSchools/class20.css
+@@ -0,0 +1,22 @@
+div{
+    padding: 20px;   
+}
+div img{
+    animation: slide 1s forwards;
+    transform: translateY(300px) scale(1.2);
+    opacity: 0;
+}
+@keyframes slide{
+    /* 0%{
+        opacity: 0;
+        transform: scale(1.1);
+    } */
+        /* 100%{
+            opacity: 1;
+            transform : none;
+        } */
+        to {
+            opacity: 1;
+            transform : none;
+        }
+}
+ 34  
+week2-IP-CipherSchools/class21-Parallax-CipherSchools.html
+@@ -0,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class21.css">
+    <title>Scrolling and parallax</title>
+</head>
+<body>
+    <div>
+        <header></header>
+        <section>
+            <h2>Paragraph</h2>
+        <p>
+            A paragraph is a series of related sentences developing a central idea, called the topic.
+            Try to think about paragraphs in terms of thematic unity: a paragraph is a sentence or a group of sentences that supports one central, unified idea. Paragraphs add one idea at a time to your broader argument.
+            <br>
+            A paragraph is a series of related sentences developing a central idea, called the topic.
+            Try to think about paragraphs in terms of thematic unity: a paragraph is a sentence or a group of sentences that supports one central, unified idea. Paragraphs add one idea at a time to your broader argument.
+            <br>
+            A paragraph is a series of related sentences developing a central idea, called the topic.
+            Try to think about paragraphs in terms of thematic unity: a paragraph is a sentence or a group of sentences that supports one central, unified idea. Paragraphs add one idea at a time to your broader argument.
+            <br>
+            A paragraph is a series of related sentences developing a central idea, called the topic.
+            Try to think about paragraphs in terms of thematic unity: a paragraph is a sentence or a group of sentences that supports one central, unified idea. Paragraphs add one idea at a time to your broader argument.
+            <br>
+        </p>
+        <small>All rights reserved &copy; 2021</small>
+        </section>
+    </div>
+
+</body>
+</html>
+ 24  
+week2-IP-CipherSchools/class21.css
+@@ -0,0 +1,24 @@
+div {
+    display: block;
+    overflow-x: hidden;
+    height: 100vh;
+    max-height: 100%;
+    perspective: 1px;
+    perspective-origin: center top;
+}
+
+section {
+    padding: 35px 20px; 
+    background-color: white; 
+    transform: translateZ(0);
+}
+
+header{
+     background-image: url('image_car.jpg')I no-repeat  center center / cover;
+    height: 50vh;
+    position: relative;
+    padding: 1px;
+    transform-origin: center top;
+    transform: translateZ(-1px) scale(2.01);
+
+}
+ 15  
+week2-IP-CipherSchools/class22-gradient-CipherSchools.html
+@@ -0,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class22.css">
+    <title>Web Gradients</title>
+</head>
+<body>
+    <div class="box">
+        <h1>This is how gradients look</h1>
+    </div>
+</body>
+</html>
+ 17  
+week2-IP-CipherSchools/class22.css
+@@ -0,0 +1,17 @@
+.box {
+    width: 100%;
+    text-align: center;
+    padding: 20px;
+    color: white;
+    /* background-image:  linear-gradient(120deg, #84fab0 0%, #8fd3f4 100%); */
+    background-image: linear-gradient(120deg, #a6c0fe 0%, #f68084 100%);
+    /* background-color: linear-gradient(
+        to right,
+        #b8cbb8 0%,
+        #b8cbb8 0%,
+        #b465da 0%,
+        #cf6cc9 33%,
+        #ee609c 66%,
+        #ee609c 100%
+    ); */
+}
+ 16  
+week2-IP-CipherSchools/class23-transform-CipherSchools.html
+@@ -0,0 +1,16 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class23.css">
+    <title>Transform</title>
+</head>
+<body>
+    <article>
+        <h1>Clip Paths</h1>
+        <p> here will be the description of what you're building or whatever you want to put into it!</p>
+    </article>
+</body>
+</html>
+ 28  
+week2-IP-CipherSchools/class23.css
+@@ -0,0 +1,28 @@
+* {
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+article{
+    height: 50vh;
+    background: url('pic_trulli.jpg')I no-repeat  center center / cover;
+    color: white;
+    box-shadow: insert 1000px 0px rgba(0,0,0,0.4);
+    text-align: center;
+    padding: 35px 20px;
+    clip-path: polygon(
+        0% 0%,
+        100% 0%,
+        100% 75%,
+        75% 75%,
+        75% 100%,
+        50% 75%,
+        0% 75%
+    );
+}
+
+article h1,article p {
+    width:50%;
+    margin: auto;
+
+}
+ 20  
+week2-IP-CipherSchools/class24-debugging-CipherSchools.html
+@@ -0,0 +1,20 @@
+<!Doctype html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport",content="width-device-width,initial-scale-1.0">
+    <link rel="stylesheet" href="class24.css">
+    <title>Debugging in Html</title>
+</head>
+<body>
+    <h2>Paragraph</h2>
+    <img src="image_car.jpg" alt="" width="40%">
+    <p>
+        A paragraph is a series of related sentences developing a central idea, called the topic.
+        Try to th about paragraphs in terms of thematic unity: a paragraph is a sentence or a 
+        group of sentences I supports one central, unified idea. Paragraphs add one idea at a 
+        time to your broader argument.
+    </p>
+    <small>All rights reserved &copy; 2021</small>
+</body>
+</html>
+ 18  
+week2-IP-CipherSchools/class24.css
+@@ -0,0 +1,18 @@
+:root {
+    --primary-color: #f52e5d;
+    --secondary-color: #fff;
+    --big-font: 40px;
+    --small-font: 20px;
+}
+*{  
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+p {
+    background: var(--primary-color);
+    color: var(--secondary-color);
+    padding: 10px;
+    font-size: var(--small-font);
+}
+ 36  
+week2-IP-CipherSchools/class3-syntaxandterminology-CipherSchools.html
+@@ -0,0 +1,36 @@
+<!Doctype html>
+<html lang="en">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport",content="width-device-width,initial-scale-1.0">
+    <link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="class3.css">
+    <title>paragraphs,headlines,small text,superscripts and subscripts</title>
+    <!-- <style>
+       /*@import url("/css/style.css");*/
+    p{
+        background-color: blue;
+    }
+</style> -->
+</head>
+<body>
+    <p><em>Hello Everyone</em></p>
+    <h1 >welcome to the bootcamp</h1>
+    <h2 >welcome to the bootcamp</h2>
+    <h3 >welcome to the bootcamp</h3>
+    <h4 >welcome to the bootcamp</h4>
+    <h5 >welcome to the bootcamp</h5>
+    <h6 >welcome to the bootcamp</h6>
+
+    <!--Subscripts-->
+    <p>
+        <strong>H<sub>2</sub>O</strong>
+    </p>
+
+    <!--Superscripts-->
+    <p>
+        5<sup>3</sup>
+    </p>
+    <small>All right reserved &copy; 2021</small>
+</body>
+</html>
+ 5  
+week2-IP-CipherSchools/class3.css
+@@ -0,0 +1,5 @@
+/* This is a paragraph style */
+p{
+    color:blue;
+    background-color: bisque;
+}
+ 39  
+week2-IP-CipherSchools/class4-valuesandunits-CipherSchools.html
+@@ -0,0 +1,39 @@
+<!Doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" ,content="width-device-width,initial-scale-1.0">
+<link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="class4.css">
+<title>paragraphs,headlines,small text,superscripts and subscripts</title>
+<!-- <style>
+       /*@import url("/css/style.css");*/
+    p{
+        background-color: blue;
+    }
+</style> -->
+</head>
+
+<body>
+    <div>
+        <p><em>Hello Everyone</em></p>
+        <h1>welcome to the bootcamp</h1>
+        <h2>welcome to the bootcamp</h2>
+        <h3>welcome to the bootcamp</h3>
+        <h4>welcome to the bootcamp</h4>
+        <h5>welcome to the bootcamp</h5>
+        <h6>welcome to the bootcamp</h6>
+    </div>
+    <!--Subscripts-->
+    <p>
+        <strong>H<sub>2</sub>O</strong>
+    </p>
+
+    <!--Superscripts-->
+    <p>
+        5<sup>3</sup>
+    </p>
+    <small>All right reserved &copy; 2021</small>
+</body>
+
+</html>
+ 31  
+week2-IP-CipherSchools/class4.css
+@@ -0,0 +1,31 @@
+/* This is a paragraph style */
+p{
+    color:blue;
+    background-color: bisque;
+    /* Absolute units */
+    width: 200px;
+    /* Relative units */
+    width:70vw;
+    /* The number values with no units */
+    margin:0;
+    line-height:1.2;
+}
+div{
+    /* function values */
+    transform:rotate(0deg);
+    width:calc(100% - 20px);
+    height:100vh;
+    background-image: url("fruit.jpg");
+}
+/* A Shorthand property */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color:blue;
+}
+/* h2{
+    color:blue;
+} */
+ 39  
+week2-IP-CipherSchools/class5-ColorAndpropertyvalues-CipherSchools.html
+@@ -0,0 +1,39 @@
+<!Doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" ,content="width-device-width,initial-scale-1.0">
+<link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="class5.css">
+<title>paragraphs,headlines,small text,superscripts and subscripts</title>
+<!-- <style>
+       /*@import url("/css/style.css");*/
+    p{
+        background-color: blue;
+    }
+</style> -->
+</head>
+
+<body>
+    <div>
+        <p><em>Hello Everyone</em></p>
+        <h1>welcome to the bootcamp</h1>
+        <h2>welcome to the bootcamp</h2>
+        <h3>welcome to the bootcamp</h3>
+        <h4>welcome to the bootcamp</h4>
+        <h5>welcome to the bootcamp</h5>
+        <h6>welcome to the bootcamp</h6>
+    </div>
+    <!--Subscripts-->
+    <p>
+        <strong>H<sub>2</sub>O</strong>
+    </p>
+
+    <!--Superscripts-->
+    <p>
+        5<sup>3</sup>
+    </p>
+    <small>All right reserved &copy; 2021</small>
+</body>
+
+</html>
+ 34  
+week2-IP-CipherSchools/class5.css
+@@ -0,0 +1,34 @@
+/* This is a paragraph style */
+p{
+    color:#ded6c8;
+    background-color: rgba(0, 0, 0,0.8);
+    /* background-color: rgb(0, 0, 0); */
+    /* background-color: rgb(0, 0, 0); */
+    /* background-color: hsla(hue, saturation, lightness, alpha); */
+
+    /* Absolute units */
+    width: 200px;
+    /* Relative units */
+    width:70vw;
+    /* The number values with no units */
+    margin:0;
+    line-height:1.2;
+}
+div{
+    /* function values */
+    transform:rotate(0deg);
+    width:calc(100% - 20px);
+    background-image: url("fruit.jpg");
+}
+/* A Shorthand property */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color:blue;
+}
+/* h2{
+    color:blue;
+} */
+ 39  
+week2-IP-CipherSchools/class6-CSSselector-CipherSchools.html
+@@ -0,0 +1,39 @@
+<!Doctype html>
+<html lang="en">
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" ,content="width-device-width,initial-scale-1.0">
+<link rel="shortcut icon" href="/assets/favicon.png" type="image/x-icon">
+<link rel="stylesheet" href="class6.css">
+<title>paragraphs,headlines,small text,superscripts and subscripts</title>
+<!-- <style>
+       /*@import url("/css/style.css");*/
+    p{
+        background-color: blue;
+    }
+</style> -->
+</head>
+
+<body>
+    <div class="div container">
+        <p id="one"><em>Hello Everyone</em></p>
+        <h1>welcome to the bootcamp</h1>
+        <h2>welcome to the bootcamp</h2>
+        <h3 class="heading">welcome to the bootcamp</h3>
+        <h4>welcome to the bootcamp</h4>
+        <h5>welcome to the bootcamp</h5>
+        <h6>welcome to the bootcamp</h6>
+    </div>
+    <!--Subscripts-->
+    <p>
+        <strong>H<sub>2</sub>O</strong>
+    </p>
+
+    <!--Superscripts-->
+    <p>
+        5<sup>3</sup>
+    </p>
+    <small>All right reserved &copy; 2021</small>
+</body>
+
+</html>
+ 68  
+week2-IP-CipherSchools/class6.css
+@@ -0,0 +1,68 @@
+/* Universal Selector */
+/* *{
+    background-color: indianred;
+} */
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    color: purple;
+}
+/* Type/Element/Tag Selector */
+strong{
+    font-size: 20px;
+}
+/* Type/Element/Tag Selector */
+/* This is a paragraph style */
+p{
+    color: inherit;
+    /* color:#ded6c8; */
+    background-color: rgba(177, 79, 79, 0.8);
+    /* background-color: rgb(0, 0, 0); */
+    /* background-color: rgb(0, 0, 0); */
+    /* background-color: hsla(hue, saturation, lightness, alpha); */
+
+    /* Absolute units */
+    width: 200px;
+    /* Relative units */
+    width:70vw;
+    /* The number values with no units */
+    margin:0;
+    line-height:1.2;
+}
+/* Type/Element/Tag Selector */
+div{
+    /* function values */
+    transform:rotate(0deg);
+    width:calc(100% - 20px);
+    background-image: url("fruit.jpg");
+}
+/* Type/Element/Tag Selector */
+/* A Shorthand property */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6{
+    color:blue;
+}
+/* h2{
+    color:blue;
+} */
+.heading{
+  background-color: #000;  
+}
+#one{
+    font-size: 30px;
+}
+/* Desendant Selector */
+.div p{
+    font-size: 50px;
+}
+/* Grouping Selector */
+.div .container{
+    font-style: italic;
+}
+ 25  
+week2-IP-CipherSchools/class7-inheritance&specificity-CipherSchools.html
+@@ -0,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class7.css">
+    <title>Inheritance & Specificity</title>
+</head>
+<body>
+    <header>
+        <p class="para" id="para">Hello everyone!</p>
+    </header>
+    <main>
+        <article>
+            <aside>
+
+            </aside>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
+ 28  
+week2-IP-CipherSchools/class7.css
+@@ -0,0 +1,28 @@
+* {
+    color: green;
+}
+
+p {
+    color: red !important;
+}
+
+p {
+    /* This will be prefered */
+    color: blueviolet;
+    font-size: 30px;
+    font-size: 70px;
+    /*This will be prefered*/
+}
+
+.para {
+    /* color: black; */
+}
+
+#para {
+    /* color: purple; */
+
+}
+
+header p {
+    color: rgb(33, 133, 146) !important;
+}
+ 30  
+week2-IP-CipherSchools/class8-CSScombinators-CipherSchools.html
+@@ -0,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class8.css">
+    <title>Inheritance & Specificity</title>
+</head>
+<body>
+    <header>
+        <p class="para" id="para">Hello everyone!</p>
+        <p>This is us</p>
+    </header>
+    <p>This is us</p>
+    <p>This is us</p>
+    <p>This is us</p>
+    <p>This is us</p>
+    <main>
+        <article>
+            <aside>
+
+            </aside>
+        </article>
+    </main>
+    <footer>
+
+    </footer>
+</body>
+</html>
+ 37  
+week2-IP-CipherSchools/class8.css
+@@ -0,0 +1,37 @@
+*{
+    /* color: green; */
+}
+ p {
+    /* color: red!important; */
+}
+p{
+    /* This will be prefered */
+    /* color: blueviolet; */
+    font-size:30px ;
+    font-size:70px ;  /*This will be prefered*/
+}
+.para{
+    /* color: black; */
+}
+#para{
+    color: purple;
+
+}
+/* Combinators */
+/* Descendant selector */
+header p{
+    color: royalblue 
+}
+/* Child Selector */
+header > p{
+    background-color: cornsilk;
+}
+/* Adjacent Sibling Selector */
+header + p{
+    font-style: italic;
+}
+/* General Sibling Selector */
+header ~ p{
+    background-color: darkgoldenrod;
+    color: #fff;
+}
+ 21  
+week2-IP-CipherSchools/class9-multiplebg-CipherSchools.html
+@@ -0,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="class9.css">
+    <title>Multiple Background Images</title>
+</head>
+
+<body>
+    <article>
+        <h1>Multiple Background Images</h1>
+        <p>Here will be the description of what you are building or whatever you want to put into it!
+
+        </p>
+    </article>
+</body>
+
+</html>
+ 30  
+week2-IP-CipherSchools/class9.css
+@@ -0,0 +1,30 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /* background-image: url('grass.jpeg');
+    background-repeat: no-repeat;
+    background-position:10% ;
+    background-position-x:10px ;
+    background-position-y:200px ; */
+    /* background-size: 200px; */
+    background: url('grass.jpeg') no-repeat 2% 200px / 400px , url('bg.jpeg') no-repeat center / 100vw 158vh;
+}
+article{
+    background-color: rgb(18, 161, 18);
+    width: 70%;
+    border-radius: 8px;
+    padding: 18px;
+    position: absolute;
+    top: 20%;
+    left: 30%;
+    color: #fff;
+}
+article h1{
+    font-size: 100px;
+}
+article p{
+    font-size:40px ;
+}
